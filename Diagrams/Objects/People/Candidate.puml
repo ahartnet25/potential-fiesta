@@ -1,0 +1,4 @@
+@startuml Candidate
+!include <C4/C4_Container>
+    Person(candidateAlias, "Candidate", "")
+@enduml

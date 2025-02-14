@@ -1,0 +1,4 @@
+@startuml Dispute
+!include <C4/C4_Container>
+    ContainerDb(disputeDBAlias, "Dispute", "", "")
+@enduml

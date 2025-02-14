@@ -1,0 +1,4 @@
+@startuml Aptitude Test
+!include <C4/C4_Container>
+    ContainerDb(aptitudeTestDBAlias, "Aptitude Test", "", "")
+@enduml

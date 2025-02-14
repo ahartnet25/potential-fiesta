@@ -1,0 +1,10 @@
+@startuml 
+
+!include <C4/C4_Component>
+
+System_Boundary(candidateAptitudeNotificationAlias, "Candidate Aptitude Notification") {
+    Container(canidateAptitudeNotificationContainer, "","", "") {
+        Component(candidateAptitudeResultsComponentAlias,"Candidate Aptitude Results") 
+    }
+} 
+@enduml

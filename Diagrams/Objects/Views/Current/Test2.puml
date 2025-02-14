@@ -1,0 +1,32 @@
+@startuml
+!include <C4/C4_Context>
+
+!include Diagrams/Objects/People/Candidate.puml
+!include Diagrams/Objects/People/Expert.puml
+
+!include Diagrams/Objects/Objects/Email.puml
+!include Diagrams/Objects/Objects/Test2.puml
+!include Diagrams/Objects/Objects/ManualGrade.puml
+!include Diagrams/Objects/Objects/Certification.puml
+
+!include Diagrams/Objects/Databases/CaseStudy.puml
+!include Diagrams/Objects/Databases/GradeAnalysis.puml
+!include Diagrams/Objects/Databases/Submissions.puml
+!include Diagrams/Objects/Databases/Certification.puml
+
+
+title Test 2 Current
+
+
+BiRel(caseStudyDBAlias,candidateAlias,"Retrieve Case Study")
+Rel(candidateAlias,test2Alias, "Takes Test")
+Rel(test2Alias,submissionsDBAlias, "Upload Solution")
+Rel(submissionsDBAlias,manualGradeAlias,"")
+BiRel(expertAlias,manualGradeAlias,"Reviews & Scores")
+Rel(manualGradeAlias,gradeAnalysisDBAlias,"")
+Rel(gradeAnalysisDBAlias,certificationAlias,"Passed")
+Rel(gradeAnalysisDBAlias,emailAlias,"")
+Rel(emailAlias,candidateAlias, "Receives Test Results")
+Rel(certificationAlias,certificationDBAlias,"")
+
+@enduml

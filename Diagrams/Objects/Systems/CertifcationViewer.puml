@@ -1,0 +1,10 @@
+@startuml 
+
+!include <C4/C4_Component>
+
+System_Boundary(certificationViewerServiceAlias, "Certification Viewer Service") {
+    Container(certificationViewerServiceContainer, "","", "") {
+        Component(certificationViewerServiceComponentAlias,"View Certification") 
+    }
+} 
+@enduml

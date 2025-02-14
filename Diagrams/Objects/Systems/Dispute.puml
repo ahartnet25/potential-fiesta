@@ -1,0 +1,31 @@
+@startuml 
+
+!include <C4/C4_Component>
+
+!include Diagrams/Objects/Databases/Dispute.puml
+!include Diagrams/Objects/Objects/Email.puml
+
+
+System_Boundary(disputeGraderAlias, "Dispute Grader") {
+    Container(disputeGraderContainer, "","", "") {
+
+        Component(disputeSystemAlias,"Dispute System") 
+
+        'queue "Dispute Grader Queue" as disputeGraderQueueAlias
+        'BiRel(disputeSystemAlias,disputeGraderQueueAlias,"Sends disputed questions for manual review")    
+        BiRel(disputeSystemAlias,disputeDBAlias,"")
+        Rel(disputeSystemAlias,emailAlias,"")
+
+    }
+} 
+
+note right of [disputeSystemAlias]
+  Used to dispute AI graded questions for both tests
+  Can update grades
+  Notifies candidate of resolution status
+end note
+
+
+
+
+@enduml

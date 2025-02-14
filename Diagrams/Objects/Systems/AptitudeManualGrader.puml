@@ -1,0 +1,11 @@
+@startuml 
+
+!include <C4/C4_Component>
+
+System_Boundary(aptitudeManualGraderAlias, "Test 1 Manual Grader") {
+    Container(manualGraderContainer, "","", "") {
+        Component(shortAnswerGraderComponentAlias,"Short Answer") 
+        Component(gradeConsolidationComponentAlias,"Grade Consolidation") 
+    }
+} 
+@enduml

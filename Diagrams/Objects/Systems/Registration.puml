@@ -1,0 +1,10 @@
+@startuml 
+
+!include <C4/C4_Component>
+
+System_Boundary(registrationSystemAlias, "Candidate Registration Service") {
+    Container(registrationContainer, "","", "") {
+        Component(registrationComponentAlias,"Candidate Registration") 
+    }
+} 
+@enduml

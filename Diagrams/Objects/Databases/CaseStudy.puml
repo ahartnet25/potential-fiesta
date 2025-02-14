@@ -1,0 +1,4 @@
+@startuml Graded
+!include <C4/C4_Container>
+    ContainerDb(caseStudyDBAlias, "Case Study", "Test2", "")
+@enduml

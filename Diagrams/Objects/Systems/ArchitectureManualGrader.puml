@@ -1,0 +1,10 @@
+@startuml 
+
+!include <C4/C4_Component>
+
+System_Boundary(architectureManualGraderAlias, "Architecture Manual Grader") {
+    Container(architectureManualGraderContainer, "","", "") {
+        Component(architectureManualGraderComponentAlias,"Architecture Grading") 
+    }
+} 
+@enduml

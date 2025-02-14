@@ -1,0 +1,63 @@
+@startuml
+
+
+!include <C4/C4_Context>
+
+!include Diagrams/Objects/Interfaces/Grading.puml
+!include Diagrams/Objects/Interfaces/Testing.puml
+
+!include Diagrams/Objects/People/Candidate.puml
+!include Diagrams/Objects/People/Expert.puml
+
+!include Diagrams/Objects/Systems/RagAITest1.puml
+
+!include Diagrams/Objects/Objects/Test1.puml
+!include Diagrams/Objects/Objects/AutoGrade.puml
+!include Diagrams/Objects/Objects/ManualGrade.puml
+
+!include Diagrams/Objects/Databases/Ungraded.puml
+!include Diagrams/Objects/Databases/Graded.puml
+!include Diagrams/Objects/Databases/AptitudeTest.puml
+'!include Diagrams/Objects/Databases/VectorStoreTest1.puml
+
+
+
+
+title Test 1 Future
+
+
+
+
+Rel(candidateAlias,testingInterfaceAlias, "Takes Test")
+Rel(testingInterfaceAlias,test1Alias ,"")
+Rel(test1Alias,ungradedDBAlias ,"Submits Answers")
+Rel(ungradedDBAlias,autoGradeAlias ,"Sends Multiple Choice Answers")
+Rel(ungradedDBAlias,ragaiGraderAlias , "Sends Short Answer Responses To AI Grader")
+Rel(ragaiGraderAlias,gradedDBAlias, "")
+Rel(flagedGraderQueueAlias,manualGradeAlias, "Get Questions")
+Rel(autoGradeAlias,gradedDBAlias , "Stores Auto-Graded Answers")
+BiRel(expertAlias,gradingInterfaceAlias, "Reviews & Scores")
+Rel(gradingInterfaceAlias,manualGradeAlias,"")
+Rel(manualGradeAlias,gradedDBAlias , "Stores Manually-Graded Answers")
+
+Rel(gradedDBAlias,ragDataRetrievalAlias, "Feeds Data For Analysis")
+
+Rel(ragInsightGenerationAlias,expertAlias, "")
+Rel(expertAlias, aptitudeTestDBAlias,"Modifies Test")
+
+
+
+note right of expertAlias
+  The Software Architect:
+  - Reviews AI-generated insights
+  - Decides on test modifications
+  - Implements changes to the test
+  - Manually grades flagged questions AI couldn't answer
+end note
+
+'Rel(gradedDBAlias,emailAlias , "Sends Final Results")
+'Rel(emailAlias,candidateAlias, "Receives Test Results")
+
+@enduml
+
+

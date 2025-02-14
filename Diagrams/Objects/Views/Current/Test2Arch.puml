@@ -1,0 +1,60 @@
+@startuml 
+
+!include <C4/C4_Component>
+
+!include Diagrams/Objects/Interfaces/Grading.puml
+!include Diagrams/Objects/Interfaces/Testing.puml
+!include Diagrams/Objects/Interfaces/Certification.puml
+
+
+together {
+!include Diagrams/Objects/Systems/CaseStudyRetrieval.puml
+!include Diagrams/Objects/Systems/CandidateStatusService.puml
+!include Diagrams/Objects/Systems/ArchitectureSubmission.puml
+}
+
+!include Diagrams/Objects/Systems/ArchitectureManualGrader.puml
+!include Diagrams/Objects/Systems/CandidateCertifaction.puml
+!include Diagrams/Objects/Systems/CandidateNotification.puml
+!include Diagrams/Objects/Systems/CertifcationViewer.puml
+
+!include Diagrams/Objects/Databases/CaseStudy.puml
+!include Diagrams/Objects/Databases/CandidateStatus.puml
+!include Diagrams/Objects/Databases/Ungraded.puml
+!include Diagrams/Objects/Databases/GradeAnalysis.puml
+!include Diagrams/Objects/Databases/Certification.puml
+
+
+!include Diagrams/Objects/Objects/Certification.puml
+!include Diagrams/Objects/Objects/Email.puml
+
+
+testingInterfaceAlias -down-> caseStudyRetrievalServiceAlias
+testingInterfaceAlias -down-> architectureSubmissionAlias
+testingInterfaceAlias -down-> candidateServiceAlias
+
+gradingInterfaceAlias -down-> architectureManualGraderAlias
+certificationViewerAlias -down->  certificationViewerServiceAlias
+
+
+
+
+caseStudyDBAlias -up-> caseStudyRetrievalServiceAlias
+Rel(caseStudyRetrievalServiceAlias,candidateServiceAlias,"")
+Rel(candidateServiceAlias,candidateStatusDBAlias,"")
+Rel(architectureSubmissionAlias,candidateServiceAlias,"")
+Rel(architectureSubmissionAlias,ungradedDBAlias,"")
+Rel(ungradedDBAlias,architectureManualGraderAlias,"")
+Rel(architectureManualGraderAlias,gradeAnalysisDBAlias,"")
+Rel(architectureManualGraderAlias,candidateCertificationServiceGraderAlias,"")
+Rel(architectureManualGraderAlias,candidateNotifcationGraderAlias,"")
+Rel(gradeAnalysisDBAlias,candidateNotifcationGraderAlias,"")
+Rel(candidateNotifcationGraderAlias,emailAlias,"")
+Rel(candidateNotifcationGraderAlias,certificationAlias,"")
+
+
+Rel(candidateCertificationServiceGraderAlias,certificationDBAlias,"")
+Rel(certificationDBAlias,candidateNotifcationGraderAlias,"")
+Rel(certificationDBAlias,certificationViewerServiceAlias,"")
+
+@enduml

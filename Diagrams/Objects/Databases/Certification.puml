@@ -1,0 +1,4 @@
+@startuml Certification
+!include <C4/C4_Container>
+    ContainerDb(certificationDBAlias, "Certification", "Test2", "")
+@enduml

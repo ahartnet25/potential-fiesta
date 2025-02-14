@@ -1,0 +1,10 @@
+@startuml 
+
+!include <C4/C4_Component>
+
+System_Boundary(aptitudeAutoGraderlias, "Test 1 Auto Grader") {
+    Container(autoGraderContainer, "","", "") {
+        Component(multipleChoiceAnswerComponentAlias,"Multiple Choice") 
+    }
+} 
+@enduml

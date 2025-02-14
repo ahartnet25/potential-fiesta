@@ -1,0 +1,4 @@
+@startuml Expert
+!include <C4/C4_Container>
+    Person(expertAlias, "Expert", "")
+@enduml

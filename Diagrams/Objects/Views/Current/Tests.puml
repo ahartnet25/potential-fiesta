@@ -1,0 +1,9 @@
+@startuml
+!include <C4/C4_Context>
+
+!include Test1.puml
+!include Test2.puml
+
+title Both Tests
+
+@enduml

@@ -1,0 +1,4 @@
+@startuml LLM
+!include <C4/C4_Container>
+    System(llmAlias, "LLM", "")
+@enduml

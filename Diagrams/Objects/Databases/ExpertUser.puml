@@ -1,0 +1,4 @@
+@startuml Expert User
+!include <C4/C4_Container>
+    ContainerDb(expertUserDBAlias, "Expert User", "", "")
+@enduml

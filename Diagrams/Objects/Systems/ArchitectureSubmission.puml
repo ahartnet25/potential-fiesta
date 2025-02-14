@@ -1,0 +1,10 @@
+@startuml 
+
+!include <C4/C4_Component>
+
+System_Boundary(architectureSubmissionAlias, "Architecture Submission Service") {
+    Container(architectureSubmissionContainer, "","", "") {
+        Component(architectureSubmissionComponentAlias,"Architecture Submission") 
+    }
+} 
+@enduml

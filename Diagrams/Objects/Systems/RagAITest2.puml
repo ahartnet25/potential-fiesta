@@ -1,0 +1,63 @@
+@startuml 
+
+!include <C4/C4_Component>
+
+!include Diagrams/Objects/Databases/VectorStoreTest2.puml
+!include Diagrams/Objects/Databases/GradeAnalysis.puml
+!include Diagrams/Objects/Objects/LLM.puml
+
+System_Boundary(ragAITest2Alias, "AI With Rag Test 2") {
+    Container(ragAITest2Container, "","", "") {
+
+        Component(ragDataRetrievalAlias,"Data Retrieval") 
+        Component(ragKnowledgeEngineAlias,"Knowledge Engine") 
+        Component(ragAnalysisEngineAlias,"Analysis Engine") 
+        Component(ragInsightGenerationAlias,"Insight Generation") 
+        Component(ragaiGraderAlias,"AI Grader") 
+        Component(feedbackServiceAlias,"Feedback Service") 
+        queue "Flaged Grader Queue" as flagedGraderQueueAlias
+
+        Rel(ragDataRetrievalAlias,ragKnowledgeEngineAlias,"Queries")
+        Rel(ragKnowledgeEngineAlias,ragAnalysisEngineAlias,"Supplies Context")
+        Rel(ragKnowledgeEngineAlias,ragaiGraderAlias,"Supplies Context")
+        Rel(ragDataRetrievalAlias,ragAnalysisEngineAlias,"Provides Data")
+        Rel(ragAnalysisEngineAlias,ragInsightGenerationAlias,"Processes")
+        BiRel(ragKnowledgeEngineAlias,vectorStoreTest2DBAlias,"")
+
+        Rel(ragaiGraderAlias,flagedGraderQueueAlias,"Sends uncertain answers")
+        Rel(ragaiGraderAlias,feedbackServiceAlias,"Sends feedback")  
+        Rel(ragaiGraderAlias,llmAlias,"Sends data for analysis")  
+        Rel(feedbackServiceAlias,gradeAnalysisDBAlias, "Stores feedback")    
+
+    }
+} 
+
+note right of [ragaiGraderAlias]
+  Uses AI to grade questions
+  Uses current knowledge base to check for cheating (duplicate submissions)
+end note
+
+
+note right of [ragDataRetrievalAlias]
+  Retrieves relevant test data
+  and patterns from the database
+end note
+
+note right of [ragKnowledgeEngineAlias]
+  Stores contextual information
+  and historical test data
+end note
+
+note right of [ragAnalysisEngineAlias]
+  Uses RAG to combine retrieved data
+  with knowledge for accurate analysis
+end note
+
+note right of [ragInsightGenerationAlias]
+  Produces insights such as:
+  - Commonly incorrect questions
+  - Universally correct answers
+  - Suggested test improvements
+end note
+
+@enduml

@@ -1,0 +1,4 @@
+@startuml HR
+!include <C4/C4_Container>
+    Person(hrAlias, "HR", "")
+@enduml

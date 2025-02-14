@@ -1,0 +1,10 @@
+@startuml 
+
+!include <C4/C4_Component>
+
+System_Boundary(candidateServiceAlias, "Candidate Status Service") {
+    Container(canidateServiceContainer, "","", "") {
+        Component(candidateComponentAlias,"Candidate Progress") 
+    }
+} 
+@enduml

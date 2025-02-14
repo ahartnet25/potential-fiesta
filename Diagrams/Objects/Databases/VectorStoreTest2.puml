@@ -1,0 +1,4 @@
+@startuml Vector Store Test 2
+!include <C4/C4_Container>
+    ContainerDb(vectorStoreTest2DBAlias, "Vector Store", "Test2", "")
+@enduml

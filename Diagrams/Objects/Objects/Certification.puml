@@ -1,0 +1,4 @@
+@startuml Certification
+!include <C4/C4_Container>
+    System(certificationAlias, "Certification", "")
+@enduml

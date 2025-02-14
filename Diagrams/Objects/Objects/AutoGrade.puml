@@ -1,0 +1,4 @@
+@startuml Auto Grade
+!include <C4/C4_Container>
+    System(autoGradeAlias, "Auto Grade", "")
+@enduml

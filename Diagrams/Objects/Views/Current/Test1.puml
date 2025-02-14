@@ -1,0 +1,28 @@
+@startuml
+!include <C4/C4_Context>
+
+!include Diagrams/Objects/People/Candidate.puml
+!include Diagrams/Objects/People/Expert.puml
+
+!include Diagrams/Objects/Objects/Test1.puml
+!include Diagrams/Objects/Objects/Email.puml
+!include Diagrams/Objects/Objects/AutoGrade.puml
+!include Diagrams/Objects/Objects/ManualGrade.puml
+
+!include Diagrams/Objects/Databases/Ungraded.puml
+!include Diagrams/Objects/Databases/Graded.puml
+
+title Test 1 Current
+
+
+Rel(candidateAlias,test1Alias ,"Takes Test")
+Rel(test1Alias,ungradedDBAlias ,"Submits Answers")
+Rel(ungradedDBAlias,autoGradeAlias ,"Sends Multiple Choice Answers")
+Rel(ungradedDBAlias,manualGradeAlias , "Sends Short Answer Responses")
+Rel(autoGradeAlias,gradedDBAlias , "Stores Auto-Graded Answers")
+BiRel(expertAlias,manualGradeAlias , "Reviews & Scores")
+Rel(manualGradeAlias,gradedDBAlias , "Stores Manually-Graded Answers")
+Rel(gradedDBAlias,emailAlias , "Sends Final Results")
+Rel(emailAlias,candidateAlias, "Receives Test Results")
+
+@enduml

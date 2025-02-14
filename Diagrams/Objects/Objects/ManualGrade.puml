@@ -1,0 +1,4 @@
+@startuml Manual Grade
+!include <C4/C4_Container>
+    System(manualGradeAlias, "Manual Grade", "")
+@enduml

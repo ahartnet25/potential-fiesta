@@ -1,0 +1,4 @@
+@startuml Ungraded
+!include <C4/C4_Container>
+    ContainerDb(ungradedDBAlias, "Ungraded Answers", "Test1", "")
+@enduml

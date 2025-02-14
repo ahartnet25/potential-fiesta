@@ -1,0 +1,4 @@
+@startuml Graded
+!include <C4/C4_Container>
+    ContainerDb(gradedDBAlias, "Graded Answers", "Test1", "")
+@enduml

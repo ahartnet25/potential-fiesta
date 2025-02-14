@@ -1,0 +1,10 @@
+@startuml 
+
+!include <C4/C4_Component>
+
+System_Boundary(caseStudyRetrievalServiceAlias, "Case Study Retrieval") {
+    Container(caseStudyRetrievalServiceContainer, "","", "") {
+        Component(caseStudyRetrievalComponentAlias,"Case Study") 
+    }
+} 
+@enduml

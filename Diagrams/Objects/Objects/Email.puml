@@ -1,0 +1,4 @@
+@startuml Email
+!include <C4/C4_Container>
+    System(emailAlias, "Email", "")
+@enduml

@@ -1,0 +1,29 @@
+@startuml
+
+
+!include <C4/C4_Context>
+
+!include Diagrams/Objects/Interfaces/Dispute.puml
+
+!include Diagrams/Objects/People/Candidate.puml
+!include Diagrams/Objects/People/Expert.puml
+
+!include Diagrams/Objects/Systems/Dispute.puml
+
+!include Diagrams/Objects/Databases/Graded.puml
+
+Rel(candidateAlias,disputeInterfaceAlias, "Submit Dispute" )
+Rel(disputeInterfaceAlias,disputeSystemAlias, "Dispute" )
+Rel(disputeSystemAlias,gradedDBAlias, "Dispute" )
+BiRel(disputeSystemAlias,expertAlias, "Work Disputes")
+
+title Dispute (All Tests)
+
+
+
+
+
+
+@enduml
+
+

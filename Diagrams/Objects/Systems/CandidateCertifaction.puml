@@ -1,0 +1,10 @@
+@startuml 
+
+!include <C4/C4_Component>
+
+System_Boundary(candidateCertificationServiceGraderAlias, "Candidate Certification Service") {
+    Container(candidateCertificationServiceContainer, "","", "") {
+        Component(candidateCertificationServiceComponentAlias,"Generate Certification") 
+    }
+} 
+@enduml

@@ -1,0 +1,10 @@
+@startuml 
+
+!include <C4/C4_Component>
+
+System_Boundary(aptitudeManualCaptureAlias, "Test 1 Manual Capture") {
+    Container(manualCaptureContainer, "","", "") {
+        Component(shortAnswerComponentAlias,"Short Answer") 
+    }
+} 
+@enduml

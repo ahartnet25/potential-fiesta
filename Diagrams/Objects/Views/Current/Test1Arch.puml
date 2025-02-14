@@ -1,0 +1,49 @@
+@startuml 
+
+!include <C4/C4_Component>
+
+!include Diagrams/Objects/Interfaces/Grading.puml
+!include Diagrams/Objects/Interfaces/Testing.puml
+
+
+together {
+!include Diagrams/Objects/Systems/AptitudeTestTaker.puml
+!include Diagrams/Objects/Systems/AptitudeManualCapture.puml
+!include Diagrams/Objects/Systems/AptitudeAutoGrader.puml
+}
+
+
+!include Diagrams/Objects/Systems/Registration.puml
+!include Diagrams/Objects/Systems/AptitudeManualGrader.puml
+!include Diagrams/Objects/Systems/CandidateStatusService.puml
+!include Diagrams/Objects/Systems/CandidateAptitudeNotification.puml
+!include Diagrams/Objects/Objects/Email.puml
+!include Diagrams/Objects/Databases/Candidate.puml
+!include Diagrams/Objects/Databases/CandidateStatus.puml
+!include Diagrams/Objects/Databases/AptitudeTest.puml
+!include Diagrams/Objects/Databases/Ungraded.puml
+!include Diagrams/Objects/Databases/Graded.puml
+
+Rel(registrationSystemAlias,candidateDBAlias,"")
+Rel(aptitudeTestDBAlias,aptitudeTestTakerAlias,"")
+Rel(aptitudeTestTakerAlias,aptitudeManualCaptureAlias,"")
+Rel(aptitudeTestTakerAlias,aptitudeAutoGraderlias,"") 
+Rel(aptitudeTestDBAlias,aptitudeAutoGraderlias,"")    
+Rel(aptitudeManualCaptureAlias,ungradedDBAlias,"")
+Rel(aptitudeAutoGraderlias,gradedDBAlias,"")
+Rel(ungradedDBAlias,aptitudeManualGraderAlias,"")
+Rel(aptitudeManualGraderAlias,gradedDBAlias,"")
+Rel(aptitudeManualGraderAlias,candidateServiceAlias,"")
+Rel(candidateServiceAlias,candidateStatusDBAlias,"")
+Rel(aptitudeManualGraderAlias,candidateAptitudeNotificationAlias,"")
+Rel(candidateAptitudeNotificationAlias,emailAlias,"")
+
+
+Rel(testingInterfaceAlias,registrationSystemAlias,"") 
+Rel(testingInterfaceAlias,aptitudeTestTakerAlias,"")
+Rel(testingInterfaceAlias,candidateServiceAlias,"")
+
+
+Rel(gradingInterfaceAlias,aptitudeManualGraderAlias,"")
+
+@enduml

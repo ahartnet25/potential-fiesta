@@ -1,0 +1,13 @@
+@startuml 
+
+!include <C4/C4_Component>
+
+System_Boundary(aptitudeTestTakerAlias, "Test 1 Taker") {
+    Container(aptitudeTestTakerContainer, "","", "") {
+        Component(testLoaderComponentAlias,"Test Loader") 
+        Component(questionSenderComponentAlias,"Question Sender") 
+        Component(answerCaptureComponentAlias,"Answer Capture") 
+        Component(testTimerComponentAlias,"Test Timer") 
+    }
+} 
+@enduml

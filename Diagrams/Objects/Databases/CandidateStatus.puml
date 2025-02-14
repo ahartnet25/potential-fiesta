@@ -1,0 +1,4 @@
+@startuml Candidate Status
+!include <C4/C4_Container>
+    ContainerDb(candidateStatusDBAlias, "Candidate Status", "", "")
+@enduml

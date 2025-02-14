@@ -1,0 +1,5 @@
+@startuml
+    rectangle "Dispute Interface" as disputeInterfaceAlias{
+        
+    } 
+@enduml

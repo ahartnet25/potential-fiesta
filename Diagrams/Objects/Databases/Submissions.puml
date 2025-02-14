@@ -1,0 +1,4 @@
+@startuml Submissions
+!include <C4/C4_Container>
+    ContainerDb(submissionsDBAlias, "Submissions", "Test2", "")
+@enduml

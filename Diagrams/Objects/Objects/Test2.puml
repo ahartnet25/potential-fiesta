@@ -1,0 +1,4 @@
+@startuml Test 2
+!include <C4/C4_Container>
+    System(test2Alias, "Test 2", "")
+@enduml

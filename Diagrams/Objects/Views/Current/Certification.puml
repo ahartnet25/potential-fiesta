@@ -1,0 +1,15 @@
+@startuml
+!include <C4/C4_Context>
+
+!include Diagrams/Objects/People/Candidate.puml
+!include Diagrams/Objects/People/HR.puml
+
+!include Diagrams/Objects/Databases/Certification.puml
+
+title Admin
+
+Rel(candidateAlias,certificationDBAlias,"View Cert")
+Rel(hrAlias,certificationDBAlias,"View Cert")
+
+
+@enduml

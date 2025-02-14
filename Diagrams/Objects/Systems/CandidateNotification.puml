@@ -1,0 +1,10 @@
+@startuml 
+
+!include <C4/C4_Component>
+
+System_Boundary(candidateNotifcationGraderAlias, "Candidate Notifcation") {
+    Container(candidateNotifcationContainer, "","", "") {
+        Component(candidateNotifcationComponentAlias,"Candidate Results") 
+    }
+} 
+@enduml

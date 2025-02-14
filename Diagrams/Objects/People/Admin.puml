@@ -1,0 +1,4 @@
+@startuml Admim
+!include <C4/C4_Container>
+    Person(adminAlias, "Admin", "")
+@enduml

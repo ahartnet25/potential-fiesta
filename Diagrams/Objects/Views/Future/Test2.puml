@@ -1,0 +1,55 @@
+@startuml
+
+
+!include <C4/C4_Context>
+
+!include Diagrams/Objects/Interfaces/Grading.puml
+!include Diagrams/Objects/Interfaces/Testing.puml
+
+!include Diagrams/Objects/People/Candidate.puml
+!include Diagrams/Objects/People/Expert.puml
+
+!include Diagrams/Objects/Systems/RagAITest2.puml
+
+!include Diagrams/Objects/Objects/Test2.puml
+!include Diagrams/Objects/Objects/ManualGrade.puml
+
+!include Diagrams/Objects/Databases/Submissions.puml
+'!include Diagrams/Objects/Databases/VectorStoreTest1.puml
+
+
+
+
+title Test 2 Future
+
+
+
+Rel(candidateAlias,testingInterfaceAlias, "Takes Test")
+Rel(testingInterfaceAlias,test2Alias ,"")
+Rel(test2Alias,submissionsDBAlias ,"Submits Answers")
+Rel(submissionsDBAlias,ragaiGraderAlias , "Sends Submission To AI Grader")
+Rel(ragaiGraderAlias,gradeAnalysisDBAlias, "")
+Rel(flagedGraderQueueAlias,manualGradeAlias, "Get Questions")
+BiRel(expertAlias,gradingInterfaceAlias, "Reviews & Scores")
+Rel(gradingInterfaceAlias,manualGradeAlias,"")
+Rel(manualGradeAlias,gradeAnalysisDBAlias , "Stores Manually-Graded Answers")
+Rel(gradeAnalysisDBAlias,ragDataRetrievalAlias, "Feeds Data For Analysis")
+Rel(ragInsightGenerationAlias,expertAlias, "")
+
+
+
+
+note right of expertAlias
+  The Software Architect:
+  - Reviews AI-generated insights
+  - Decides on test modifications
+  - Implements changes to the test
+  - Manually grades flagged questions AI couldn't answer
+end note
+
+'Rel(gradedDBAlias,emailAlias , "Sends Final Results")
+'Rel(emailAlias,candidateAlias, "Receives Test Results")
+
+@enduml
+
+

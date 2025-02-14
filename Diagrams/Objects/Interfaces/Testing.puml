@@ -1,0 +1,5 @@
+@startuml
+    rectangle "Testing Interface" as testingInterfaceAlias{
+        
+    }
+@enduml
