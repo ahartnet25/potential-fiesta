@@ -3,18 +3,18 @@
 
 !include <C4/C4_Context>
 
-!include Diagrams/Objects/Interfaces/Grading.puml
-!include Diagrams/Objects/Interfaces/Testing.puml
+!include ../../../../Diagrams/Objects/Interfaces/Grading.puml
+!include ../../../../Diagrams/Objects/Interfaces/Testing.puml
 
-!include Diagrams/Objects/People/Candidate.puml
-!include Diagrams/Objects/People/Expert.puml
+!include ../../../../Diagrams/Objects/People/Candidate.puml
+!include ../../../../Diagrams/Objects/People/Expert.puml
 
-!include Diagrams/Objects/Systems/RagAITest2.puml
+!include ../../../../Diagrams/Objects/Systems/RagAITest2.puml
 
-!include Diagrams/Objects/Objects/Test2.puml
-!include Diagrams/Objects/Objects/ManualGrade.puml
+!include ../../../../Diagrams/Objects/Objects/Test2.puml
+!include ../../../../Diagrams/Objects/Objects/ManualGrade.puml
 
-!include Diagrams/Objects/Databases/Submissions.puml
+!include ../../../../Diagrams/Objects/Databases/Submissions.puml
 '!include Diagrams/Objects/Databases/VectorStoreTest1.puml
 
 

@@ -3,21 +3,21 @@
 
 !include <C4/C4_Context>
 
-!include Diagrams/Objects/Interfaces/Grading.puml
-!include Diagrams/Objects/Interfaces/Testing.puml
+!include ../../../../Diagrams/Objects/Interfaces/Grading.puml
+!include ../../../../Diagrams/Objects/Interfaces/Testing.puml
 
-!include Diagrams/Objects/People/Candidate.puml
-!include Diagrams/Objects/People/Expert.puml
+!include ../../../../Diagrams/Objects/People/Candidate.puml
+!include ../../../../Diagrams/Objects/People/Expert.puml
 
-!include Diagrams/Objects/Systems/RagAITest1.puml
+!include ../../../../Diagrams/Objects/Systems/RagAITest1.puml
 
-!include Diagrams/Objects/Objects/Test1.puml
-!include Diagrams/Objects/Objects/AutoGrade.puml
-!include Diagrams/Objects/Objects/ManualGrade.puml
+!include ../../../../Diagrams/Objects/Objects/Test1.puml
+!include ../../../../Diagrams/Objects/Objects/AutoGrade.puml
+!include ../../../../Diagrams/Objects/Objects/ManualGrade.puml
 
-!include Diagrams/Objects/Databases/Ungraded.puml
-!include Diagrams/Objects/Databases/Graded.puml
-!include Diagrams/Objects/Databases/AptitudeTest.puml
+!include ../../../../Diagrams/Objects/Databases/Ungraded.puml
+!include ../../../../Diagrams/Objects/Databases/Graded.puml
+!include ../../../../Diagrams/Objects/Databases/AptitudeTest.puml
 '!include Diagrams/Objects/Databases/VectorStoreTest1.puml
 
 

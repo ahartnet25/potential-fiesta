@@ -1,16 +1,16 @@
 @startuml
 !include <C4/C4_Context>
 
-!include Diagrams/Objects/People/Candidate.puml
-!include Diagrams/Objects/People/Expert.puml
+!include ../../../../Diagrams/Objects/People/Candidate.puml
+!include ../../../../Diagrams/Objects/People/Expert.puml
 
-!include Diagrams/Objects/Objects/Test1.puml
-!include Diagrams/Objects/Objects/Email.puml
-!include Diagrams/Objects/Objects/AutoGrade.puml
-!include Diagrams/Objects/Objects/ManualGrade.puml
+!include ../../../../Diagrams/Objects/Objects/Test1.puml
+!include ../../../../Diagrams/Objects/Objects/Email.puml
+!include ../../../../Diagrams/Objects/Objects/AutoGrade.puml
+!include ../../../../Diagrams/Objects/Objects/ManualGrade.puml
 
-!include Diagrams/Objects/Databases/Ungraded.puml
-!include Diagrams/Objects/Databases/Graded.puml
+!include ../../../../Diagrams/Objects/Databases/Ungraded.puml
+!include ../../../../Diagrams/Objects/Databases/Graded.puml
 
 title Test 1 Current
 

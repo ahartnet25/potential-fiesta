@@ -2,8 +2,8 @@
 
 !include <C4/C4_Component>
 
-!include Diagrams/Objects/Databases/Dispute.puml
-!include Diagrams/Objects/Objects/Email.puml
+!include ../../../Diagrams/Objects/Databases/Dispute.puml
+!include ../../../Diagrams/Objects/Objects/Email.puml
 
 
 System_Boundary(disputeGraderAlias, "Dispute Grader") {

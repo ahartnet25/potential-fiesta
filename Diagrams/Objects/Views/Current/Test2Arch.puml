@@ -2,31 +2,31 @@
 
 !include <C4/C4_Component>
 
-!include Diagrams/Objects/Interfaces/Grading.puml
-!include Diagrams/Objects/Interfaces/Testing.puml
-!include Diagrams/Objects/Interfaces/Certification.puml
+!include ../../../../Diagrams/Objects/Interfaces/Grading.puml
+!include ../../../../Diagrams/Objects/Interfaces/Testing.puml
+!include ../../../../Diagrams/Objects/Interfaces/Certification.puml
 
 
 together {
-!include Diagrams/Objects/Systems/CaseStudyRetrieval.puml
-!include Diagrams/Objects/Systems/CandidateStatusService.puml
-!include Diagrams/Objects/Systems/ArchitectureSubmission.puml
+!include ../../../../Diagrams/Objects/Systems/CaseStudyRetrieval.puml
+!include ../../../../Diagrams/Objects/Systems/CandidateStatusService.puml
+!include ../../../../Diagrams/Objects/Systems/ArchitectureSubmission.puml
 }
 
-!include Diagrams/Objects/Systems/ArchitectureManualGrader.puml
-!include Diagrams/Objects/Systems/CandidateCertifaction.puml
-!include Diagrams/Objects/Systems/CandidateNotification.puml
-!include Diagrams/Objects/Systems/CertifcationViewer.puml
+!include ../../../../Diagrams/Objects/Systems/ArchitectureManualGrader.puml
+!include ../../../../Diagrams/Objects/Systems/CandidateCertifaction.puml
+!include ../../../../Diagrams/Objects/Systems/CandidateNotification.puml
+!include ../../../../Diagrams/Objects/Systems/CertifcationViewer.puml
 
-!include Diagrams/Objects/Databases/CaseStudy.puml
-!include Diagrams/Objects/Databases/CandidateStatus.puml
-!include Diagrams/Objects/Databases/Ungraded.puml
-!include Diagrams/Objects/Databases/GradeAnalysis.puml
-!include Diagrams/Objects/Databases/Certification.puml
+!include ../../../../Diagrams/Objects/Databases/CaseStudy.puml
+!include ../../../../Diagrams/Objects/Databases/CandidateStatus.puml
+!include ../../../../Diagrams/Objects/Databases/Ungraded.puml
+!include ../../../../Diagrams/Objects/Databases/GradeAnalysis.puml
+!include ../../../../Diagrams/Objects/Databases/Certification.puml
 
 
-!include Diagrams/Objects/Objects/Certification.puml
-!include Diagrams/Objects/Objects/Email.puml
+!include ../../../../Diagrams/Objects/Objects/Certification.puml
+!include ../../../../Diagrams/Objects/Objects/Email.puml
 
 
 testingInterfaceAlias -down-> caseStudyRetrievalServiceAlias

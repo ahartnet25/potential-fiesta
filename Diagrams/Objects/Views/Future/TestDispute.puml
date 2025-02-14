@@ -3,14 +3,14 @@
 
 !include <C4/C4_Context>
 
-!include Diagrams/Objects/Interfaces/Dispute.puml
+!include ../../../../Diagrams/Objects/Interfaces/Dispute.puml
 
-!include Diagrams/Objects/People/Candidate.puml
-!include Diagrams/Objects/People/Expert.puml
+!include ../../../../Diagrams/Objects/People/Candidate.puml
+!include ../../../../Diagrams/Objects/People/Expert.puml
 
-!include Diagrams/Objects/Systems/Dispute.puml
+!include ../../../../Diagrams/Objects/Systems/Dispute.puml
 
-!include Diagrams/Objects/Databases/Graded.puml
+!include ../../../../Diagrams/Objects/Databases/Graded.puml
 
 Rel(candidateAlias,disputeInterfaceAlias, "Submit Dispute" )
 Rel(disputeInterfaceAlias,disputeSystemAlias, "Dispute" )

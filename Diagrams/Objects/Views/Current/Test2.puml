@@ -1,18 +1,18 @@
 @startuml
 !include <C4/C4_Context>
 
-!include Diagrams/Objects/People/Candidate.puml
-!include Diagrams/Objects/People/Expert.puml
+!include ../../../../Diagrams/Objects/People/Candidate.puml
+!include ../../../../Diagrams/Objects/People/Expert.puml
 
-!include Diagrams/Objects/Objects/Email.puml
-!include Diagrams/Objects/Objects/Test2.puml
-!include Diagrams/Objects/Objects/ManualGrade.puml
-!include Diagrams/Objects/Objects/Certification.puml
+!include ../../../../Diagrams/Objects/Objects/Email.puml
+!include ../../../../Diagrams/Objects/Objects/Test2.puml
+!include ../../../../Diagrams/Objects/Objects/ManualGrade.puml
+!include ../../../../Diagrams/Objects/Objects/Certification.puml
 
-!include Diagrams/Objects/Databases/CaseStudy.puml
-!include Diagrams/Objects/Databases/GradeAnalysis.puml
-!include Diagrams/Objects/Databases/Submissions.puml
-!include Diagrams/Objects/Databases/Certification.puml
+!include ../../../../Diagrams/Objects/Databases/CaseStudy.puml
+!include ../../../../Diagrams/Objects/Databases/GradeAnalysis.puml
+!include ../../../../Diagrams/Objects/Databases/Submissions.puml
+!include ../../../../Diagrams/Objects/Databases/Certification.puml
 
 
 title Test 2 Current

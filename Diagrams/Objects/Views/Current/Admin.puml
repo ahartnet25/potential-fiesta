@@ -1,14 +1,14 @@
 @startuml
 !include <C4/C4_Context>
 
-!include Diagrams/Objects/People/Admin.puml
-!include Diagrams/Objects/People/Expert.puml
+!include ../../../../Diagrams/Objects/People/Admin.puml
+!include ../../../../Diagrams/Objects/People/Expert.puml
 
-!include Diagrams/Objects/Objects/Test1.puml
-!include Diagrams/Objects/Objects/Test2.puml
+!include ../../../../Diagrams/Objects/Objects/Test1.puml
+!include ../../../../Diagrams/Objects/Objects/Test2.puml
 
-!include Diagrams/Objects/Databases/CaseStudy.puml
-!include Diagrams/Objects/Databases/ExpertUser.puml
+!include ../../../../Diagrams/Objects/Databases/CaseStudy.puml
+!include ../../../../Diagrams/Objects/Databases/ExpertUser.puml
 
 title Admin
 

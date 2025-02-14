@@ -2,8 +2,8 @@
 
 !include <C4/C4_Component>
 
-!include Diagrams/Objects/Databases/VectorStoreTest1.puml
-!include Diagrams/Objects/Objects/LLM.puml
+!include ../../../Diagrams/Objects/Databases/VectorStoreTest1.puml
+!include ../../../Diagrams/Objects/Objects/LLM.puml
 
 System_Boundary(ragAITest1Alias, "AI With Rag Test 1") {
     Container(ragAITest1Container, "","", "") {
